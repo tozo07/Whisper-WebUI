@@ -4,7 +4,7 @@ whisper:
   lang: "Automatic Detection"
   is_translate: false
   beam_size: 5
-  log_prob_threshold: -1
+  log_prob_threshold: -0.8
   no_speech_threshold: 0.6
   best_of: 5
   patience: 1
@@ -16,7 +16,7 @@ whisper:
   chunk_length: 30
   batch_size: 24
   length_penalty: 1
-  repetition_penalty: 1
+  repetition_penalty: 1.1
   no_repeat_ngram_size: 0
   prefix: null
   suppress_blank: true
@@ -26,7 +26,7 @@ whisper:
   prepend_punctuations: "\"'“¿([{-"
   append_punctuations: "\"'.。,，!！?？:：”)]}、"
   max_new_tokens: null
-  hallucination_silence_threshold: null
+  hallucination_silence_threshold: 2.0
   hotwords: null
   language_detection_threshold: 0.5
   language_detection_segments: 1

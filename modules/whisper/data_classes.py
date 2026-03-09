@@ -497,8 +497,9 @@ class WhisperParams(BaseParams):
             ),
             gr.Checkbox(
                 label="Word Timestamps",
-                value=defaults.get("word_timestamps", cls.__fields__["word_timestamps"].default),
-                info="Extract word-level timestamps"
+                value=True,
+                info="Always enabled to reduce hallucinations",
+                interactive=False
             ),
             gr.Textbox(
                 label="Prepend Punctuations",
