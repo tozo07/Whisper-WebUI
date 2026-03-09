@@ -11,7 +11,8 @@ COPY requirements.txt .
 
 RUN python3 -m venv venv && \
     . venv/bin/activate && \
-    pip install -U -r requirements.txt
+    pip install -U pip "setuptools<80" wheel && \
+    pip install -U --no-build-isolation -r requirements.txt
 
 
 FROM debian:bookworm-slim AS runtime
